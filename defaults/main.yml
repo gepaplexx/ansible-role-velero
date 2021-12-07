@@ -1,0 +1,12 @@
+---
+velero_repository_url: https://vmware-tanzu.github.io/helm-charts
+velero_repository_name: vmware-tanzu
+velero_chart_name: velero
+velero_namespace: velero
+
+velero_s3_bucket: bucket
+velero_s3_region: minio
+velero_s3_url: https://10.20.26.45:9000
+velero_s3_access_key: miniouser
+velero_s3_secret_key: minio1234
+...

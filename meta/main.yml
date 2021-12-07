@@ -1,0 +1,16 @@
+---
+dependencies: []
+
+galaxy_info:
+  role_name: velero
+  author: Marcel Haupt
+  namespace: gepaplexx
+  description: Ansible Role for installing Velero in K8s
+  license: MIT
+  min_ansible_version: "2.10"
+  platforms:
+    - name: Ubuntu
+      versions:
+        - focal
+  galaxy_tags: []
+...
