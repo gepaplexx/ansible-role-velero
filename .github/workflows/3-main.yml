@@ -9,65 +9,10 @@ name: Main
       - '**'
 
 jobs:
-  ansible-linter:
-    name: Ansible Linter
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout Code
-        uses: actions/checkout@v2
-
-      - name: Set up Python 3
-        uses: actions/setup-python@v2
-        with:
-          python-version: '3.x'
-
-      - name: Install ansible-lint Dependencies
-        run: pip3 install ansible ansible-base ansible-lint
-
-      - name: Lint Code Base with ansible-lint
-        run: ansible-lint
-
-  pre-commit:
-    name: pre-commit
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout Code
-        uses: actions/checkout@v2
-
-      - name: Set up Python 3
-        uses: actions/setup-python@v2
-        with:
-          python-version: '3.x'
-
-      - name: Run pre-commit
-        uses: pre-commit/action@v2.0.3
-
-  yaml-linter:
-    name: YAML Linter
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout Code
-        uses: actions/checkout@v2
-
-      - name: Set up Python 3
-        uses: actions/setup-python@v2
-        with:
-          python-version: '3.x'
-
-      - name: Install yamllint Dependencies
-        run: pip3 install yamllint
-
-      - name: Lint Code Base with yamllint
-        run: yamllint .
-
   release:
     name: Release
     if: ${{ github.event_name != 'schedule' }}
     runs-on: ubuntu-latest
-    needs:
-      - ansible-linter
-      - pre-commit
-      - yaml-linter
     steps:
       - name: Checkout Code
         uses: actions/checkout@v2
