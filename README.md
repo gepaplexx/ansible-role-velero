@@ -16,7 +16,6 @@ velero_repository_url | https://vmware-tanzu.github.io/helm-charts | URL of the 
 velero_repository_name | vmware-tanzu | Name of the velero chart repository
 velero_chart_name | velero | Name of the velero chart
 velero_namespace | velero | Namespace of the velero installation
-
 velero_s3_bucket | bucket | Name of the S3 bucket to use for backup storage
 velero_s3_region | minio | Name of the S3 region to use for backup storage
 velero_s3_url | https://10.20.26.45:9000 | URL of the S3 bucket to use for backup storage
