@@ -21,6 +21,7 @@ velero_s3_region | minio | Name of the S3 region to use for backup storage
 velero_s3_url | https://10.20.26.45:9000 | URL of the S3 bucket to use for backup storage
 velero_s3_access_key | miniouser | Access key of the S3 bucket to use for backup storage
 velero_s3_secret_key | minio1234 | Secret key of the S3 bucket to use for backup storage
+velero_backupschedule_enabled | true | Enable or disable standard backup schedule
 
 
 ## Role Usage Examples
