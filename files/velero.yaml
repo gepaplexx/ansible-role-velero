@@ -371,7 +371,7 @@ restic:
 #       - foo
 schedules:
   backup:
-    disabled: false
+    disabled: {{ velero_backupschedule_enabled==false }}
     schedule: "15 */6 * * *"
     useOwnerReferencesInBackup: true
     template:
