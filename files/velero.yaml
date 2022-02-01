@@ -373,7 +373,7 @@ schedules:
   backup:
     disabled: {{ velero_backupschedule_enabled==false }}
     schedule: "15 */6 * * *"
-    useOwnerReferencesInBackup: true
+    useOwnerReferencesInBackup: false
     template:
       ttl: "336h" # 14d
 
